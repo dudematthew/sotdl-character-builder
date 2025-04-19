@@ -2,7 +2,6 @@ import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 import { store, persistor } from './store'
 import { Button } from './components/ui/button'
-import './App.css'
 
 function App() {
   return (
