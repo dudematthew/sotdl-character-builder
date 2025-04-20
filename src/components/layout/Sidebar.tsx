@@ -36,6 +36,7 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/mode-toggle";
 
 // Version from package.json
 import { version } from "../../../package.json";
@@ -83,7 +84,7 @@ export function AppSidebar() {
           <UserPen className="w-6 h-6 text-primary" />
           <div>
             <h2 className="font-semibold text-lg tracking-tight">
-              SotDL Character Creator
+              Character Creator
             </h2>
             <p className="text-muted-foreground text-xs">
             <a href="https://schwalbentertainment.com/shadow-of-the-demon-lord/">
@@ -122,6 +123,12 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter className="space-y-3 p-4">
+        <div className="flex justify-between items-center pb-2">
+          <span className="text-muted-foreground text-xs">Theme</span>
+          <ModeToggle size="sm" />
+        </div>
+        <Separator className="my-1" />
+        
         <Dialog>
           <DialogTrigger asChild>
             <Button 
@@ -137,12 +144,12 @@ export function AppSidebar() {
             <DialogHeader>
               <DialogTitle>Feedback & Support</DialogTitle>
               <DialogDescription>
-                Have suggestions, need help or found a bug? Let's talk!
+                Have suggestions or found a bug? We'd love to hear from you!
               </DialogDescription>
             </DialogHeader>
             <div className="space-y-4 py-4">
               <p className="text-sm">
-                If you have any feedback, you can either open an issue on GitHub or contact me directly on Discord.
+                If you have any feedback, you can either open an issue on GitHub or contact us directly on Discord.
               </p>
               <div className="flex sm:flex-row flex-col gap-3">
                 <Button 
@@ -175,7 +182,7 @@ export function AppSidebar() {
               </div>
               <div className="bg-muted mt-2 p-3 rounded-md">
                 <p className="text-xs">
-                  Find <span className="font-medium">@hipstersavage</span> on the Schwalb Entertainment Discord server for support.
+                  Contact <span className="font-medium">@hipstersavage</span> on the Schwalb Entertainment Discord server for direct support.
                 </p>
               </div>
             </div>
@@ -186,6 +193,7 @@ export function AppSidebar() {
             </DialogFooter>
           </DialogContent>
         </Dialog>
+        
         <div className="flex justify-between items-center">
           <a
             href="https://github.com/dudematthew/sotdl-character-builder"
