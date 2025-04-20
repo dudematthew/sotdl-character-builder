@@ -1,4 +1,4 @@
-import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { configureStore, combineReducers, AnyAction } from "@reduxjs/toolkit";
 import {
 	persistStore,
 	persistReducer,
@@ -11,18 +11,19 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
-import characterReducer from "./slices/characterSlice";
+// Create an empty reducer for now (you'll add your own character slice later)
+const emptyReducer = (state = {}, action: AnyAction) => state;
 
 const persistConfig = {
 	key: "root",
 	storage,
 	version: 1,
-	whitelist: ["characters"], // only persist these slices
+	whitelist: [], // Add slices you want to persist here
 };
 
 const rootReducer = combineReducers({
-	characters: characterReducer,
-	// Add other reducers here
+	// Add your reducers here
+	empty: emptyReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
