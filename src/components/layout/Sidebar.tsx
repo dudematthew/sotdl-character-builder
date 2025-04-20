@@ -144,12 +144,12 @@ export function AppSidebar() {
             <DialogHeader>
               <DialogTitle>Feedback & Support</DialogTitle>
               <DialogDescription>
-                Have suggestions or found a bug? We'd love to hear from you!
+                Have suggestions, need help or found a bug? Let's talk!
               </DialogDescription>
             </DialogHeader>
             <div className="space-y-4 py-4">
               <p className="text-sm">
-                If you have any feedback, you can either open an issue on GitHub or contact us directly on Discord.
+                If you have any feedback, you can either open an issue on GitHub or contact me directly on Discord.
               </p>
               <div className="flex sm:flex-row flex-col gap-3">
                 <Button 
