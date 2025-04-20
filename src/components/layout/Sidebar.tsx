@@ -20,8 +20,22 @@ import {
   Github,
   LucideIcon,
   UserPen,
-  Library
+  Library,
+  MessageCircleQuestion,
+  MessageCircle,
+  ExternalLink
 } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogFooter,
+  DialogClose,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 // Version from package.json
 import { version } from "../../../package.json";
@@ -107,7 +121,71 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter className="p-4">
+      <SidebarFooter className="space-y-3 p-4">
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="flex items-center gap-2 w-full text-xs"
+            >
+              <MessageCircleQuestion className="w-3.5 h-3.5" />
+              <span>Feedback</span>
+            </Button>
+          </DialogTrigger>
+          <DialogContent className="sm:max-w-md">
+            <DialogHeader>
+              <DialogTitle>Feedback & Support</DialogTitle>
+              <DialogDescription>
+                Have suggestions, need help or found a bug? Let's talk!
+              </DialogDescription>
+            </DialogHeader>
+            <div className="space-y-4 py-4">
+              <p className="text-sm">
+                If you have any feedback, you can either open an issue on GitHub or contact me directly on Discord.
+              </p>
+              <div className="flex sm:flex-row flex-col gap-3">
+                <Button 
+                  variant="outline" 
+                  className="flex items-center gap-2" 
+                  asChild
+                >
+                  <a 
+                    href="https://github.com/dudematthew/sotdl-character-builder/issues/new" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <Github className="w-4 h-4" />
+                    <span>Open GitHub Issue</span>
+                  </a>
+                </Button>
+                <Button 
+                  className="flex items-center gap-2" 
+                  asChild
+                >
+                  <a 
+                    href="https://discord.gg/wUG7NY5hcb" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    <span>Join Discord Server</span>
+                  </a>
+                </Button>
+              </div>
+              <div className="bg-muted mt-2 p-3 rounded-md">
+                <p className="text-xs">
+                  Find <span className="font-medium">@hipstersavage</span> on the Schwalb Entertainment Discord server for support.
+                </p>
+              </div>
+            </div>
+            <DialogFooter className="sm:flex-row flex-col gap-2">
+              <Button variant="outline" className="w-full sm:w-auto" asChild>
+                <DialogClose>Close</DialogClose>
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
         <div className="flex justify-between items-center">
           <a
             href="https://github.com/dudematthew/sotdl-character-builder"

@@ -37,6 +37,18 @@ export default function Home() {
           </CardContent>
         </Card>
       </div>
+
+      <div className="space-y-4">
+        <h2 className="font-semibold text-xl">Test Buttons</h2>
+        <div className="flex flex-wrap gap-4">
+          <Button variant="default">Default Button</Button>
+          <Button variant="destructive">Destructive Button</Button>
+          <Button variant="outline">Outline Button</Button>
+          <Button variant="secondary">Secondary Button</Button>
+          <Button variant="ghost">Ghost Button</Button>
+          <Button variant="link">Link Button</Button>
+        </div>
+      </div>
     </div>
   );
 }

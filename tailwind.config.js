@@ -73,4 +73,8 @@ export default {
 		},
 	},
 	plugins: [tailwindAnimate],
+	future: {
+		// Enable the latest Tailwind v4 features
+		hoverOnlyWhenSupported: true,
+	},
 };
