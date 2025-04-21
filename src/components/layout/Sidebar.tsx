@@ -87,7 +87,7 @@ export function AppSidebar() {
               Character Creator
             </h2>
             <p className="text-muted-foreground text-xs">
-            <a href="https://schwalbentertainment.com/shadow-of-the-demon-lord/">
+            <a href="https://schwalbentertainment.com/shadow-of-the-demon-lord/" target="_blank" rel="noreferer noopener">
               For Shadow of the Demon Lord
             </a>
             </p>
