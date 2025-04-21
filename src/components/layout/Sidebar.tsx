@@ -22,9 +22,9 @@ import {
   UserPen,
   Library,
   MessageCircleQuestion,
-  MessageCircle,
   ExternalLink
 } from "lucide-react";
+import { DiscordIcon } from "@/components/icons/DiscordIcon";
 import {
   Dialog,
   DialogContent,
@@ -175,14 +175,14 @@ export function AppSidebar() {
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
-                    <MessageCircle className="w-4 h-4" />
+                    <DiscordIcon className="w-4 h-4" />
                     <span>Join Discord Server</span>
                   </a>
                 </Button>
               </div>
               <div className="bg-muted mt-2 p-3 rounded-md">
                 <p className="text-xs">
-                  Contact <span className="font-medium">@hipstersavage</span> on the Schwalb Entertainment Discord server for direct support.
+                  Find <span className="font-medium">@hipstersavage</span> on the Schwalb Entertainment Discord server for direct contact.
                 </p>
               </div>
             </div>

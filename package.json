@@ -26,6 +26,7 @@
     "react-dom": "^19.0.0",
     "react-redux": "^9.1.0",
     "redux-persist": "^6.0.0",
+    "simple-icons": "^14.12.3",
     "sotdl-character-wrapper": "file:../sotdl-character-wrapper",
     "tailwind-merge": "^2.6.0",
     "uuid": "^11.1.0"
